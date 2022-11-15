@@ -2,16 +2,18 @@
 
 Shader "Custom/Chapter5-SimpleShader"
 {
-    Properties
-    {
-        
+    Properties {
+        _Color ("可调整颜色1", Color)= (1.0,1.0,1.0,1.0)
     }
     SubShader
     {
+        
         Pass { 
             CGPROGRAM
             #pragma vertex vert 
             #pragma fragment frag 
+
+            fixed4 _Color;
 
             //使用一个结构体来定义顶点着色器的输入
             struct a2v {
@@ -32,7 +34,9 @@ Shader "Custom/Chapter5-SimpleShader"
                 return o ;
             }
             fixed4 frag(v2f i) : SV_Target { 
-                return fixed4(i.color, 1.0); 
+                fixed3 c =i.color;
+                c *= _Color.rgb;
+                return fixed4(c, 1.0); 
             }
             ENDCG
             }
