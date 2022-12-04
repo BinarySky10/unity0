@@ -61,8 +61,10 @@
   <ItemGroup>
      <None Include="Assets\Scenes\6\shader\DiffuseVertexLevel.shader" />
      <None Include="Assets\Scenes\6.5\shader\Blinn_phong.shader" />
+     <None Include="Assets\Scenes\7\shader\NormalMapTangentSpace.shader" />
      <None Include="Assets\shaders\Chapter5-SimpleShader.shader" />
      <None Include="Assets\Scenes\6\shader\halfLambert.shader" />
+     <None Include="Assets\Scenes\7\shader\SingleTexture1.shader" />
      <None Include="Assets\Scenes\6\shader\DiffusePixelLevel.shader" />
      <None Include="Assets\Scenes\6.5\shader\phong_1.shader" />
     <Reference Include="UnityEngine">
